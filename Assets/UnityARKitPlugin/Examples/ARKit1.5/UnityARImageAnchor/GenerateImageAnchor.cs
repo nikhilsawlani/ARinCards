@@ -16,6 +16,7 @@ public class GenerateImageAnchor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Cardui.SetActive (false);
 		UnityARSessionNativeInterface.ARImageAnchorAddedEvent += AddImageAnchor;
 		UnityARSessionNativeInterface.ARImageAnchorUpdatedEvent += UpdateImageAnchor;
 		UnityARSessionNativeInterface.ARImageAnchorRemovedEvent += RemoveImageAnchor;
@@ -28,6 +29,7 @@ public class GenerateImageAnchor : MonoBehaviour {
 		if (arImageAnchor.referenceImageName == referenceImage.imageName) {
 			Vector3 position = UnityARMatrixOps.GetPosition (arImageAnchor.transform);
 			Quaternion rotation = UnityARMatrixOps.GetRotation (arImageAnchor.transform);
+			Cardui.SetActive (true);
 			Cardui.transform.position = position;
 			Cardui.transform.rotation = rotation;
 			//imageAnchorGO = Instantiate<GameObject> (prefabToGenerate, position, rotation);
