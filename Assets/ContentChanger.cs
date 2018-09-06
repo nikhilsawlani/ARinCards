@@ -18,8 +18,26 @@ public class ContentChanger : MonoBehaviour {
         stocks.SetActive(false);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+    public void ActiveAccountsInfo(){
+        accountinfo.SetActive(true);
+        offers.SetActive(false);
+        Analytics.SetActive(false);
+        fd.SetActive(false);
+        stocks.SetActive(false);
+
+    }
+
+    public void ActiveOffers()
+    {
+        accountinfo.SetActive(false);
+        offers.SetActive(true);
+        Analytics.SetActive(false);
+        fd.SetActive(false);
+        stocks.SetActive(false);
+
+    }
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
