@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/UnityARKitPlugin/Examples/ARKit2.0/UnityARWorldMap/UnityARWorldMap.unity
     guid: ee2777dc048a5482db055433cf94aa0e
+  - enabled: 0
+    path: Assets/UnityARKitPlugin/ARKitRemote/UnityARKitRemote.unity
+    guid: 3ed73c0c9d4b76a418a0541c0cefd3ac
   m_configObjects: {}

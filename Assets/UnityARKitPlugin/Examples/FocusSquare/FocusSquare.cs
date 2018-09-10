@@ -21,8 +21,6 @@ public class FocusSquare : MonoBehaviour
 
     private bool isClicked;
     private bool canSetActive;
-
-
     //for editor version
     public float maxRayDistance = 30.0f;
     public LayerMask collisionLayerMask;
@@ -37,7 +35,6 @@ public class FocusSquare : MonoBehaviour
         }
         set
         {
-
             squareState = value;
 
             if (canSetActive == true)
@@ -47,10 +44,7 @@ public class FocusSquare : MonoBehaviour
                 findingSquare.SetActive(squareState != FocusState.Found);
 
             }
-
-
         }
-
     }
 
     bool trackingInitialized;
@@ -110,7 +104,6 @@ public class FocusSquare : MonoBehaviour
                     isClicked = false;
 
                 }
-
                 foundSquare.transform.rotation = UnityARMatrixOps.GetRotation(hitResult.worldTransform);
                 Debug.Log(string.Format("x:{0:0.######} y:{1:0.######} z:{2:0.######}", foundSquare.transform.position.x, foundSquare.transform.position.y, foundSquare.transform.position.z));
                 return true;
@@ -118,7 +111,6 @@ public class FocusSquare : MonoBehaviour
         }
         return false;
     }
-
     public void ClickButton()
     {
 
@@ -134,7 +126,6 @@ public class FocusSquare : MonoBehaviour
         findingSquare.SetActive(false);
 
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -223,6 +214,5 @@ public class FocusSquare : MonoBehaviour
 
     }
 
+
 }
-
-

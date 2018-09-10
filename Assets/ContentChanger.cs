@@ -36,6 +36,37 @@ public class ContentChanger : MonoBehaviour {
         stocks.SetActive(false);
 
     }
+
+    public void ActivePerfomance()
+    {
+        accountinfo.SetActive(false);
+        offers.SetActive(false);
+        Analytics.SetActive(true);
+        fd.SetActive(false);
+        stocks.SetActive(false);
+
+    }
+
+    public void fdinfo()
+    {
+        accountinfo.SetActive(false);
+        offers.SetActive(false);
+        Analytics.SetActive(false);
+        fd.SetActive(true);
+        stocks.SetActive(false);
+
+    }
+
+    public void Stocksinfo()
+    {
+        accountinfo.SetActive(false);
+        offers.SetActive(false);
+        Analytics.SetActive(false);
+        fd.SetActive(false);
+        stocks.SetActive(true);
+
+    }
+
     // Update is called once per frame
     void Update () {
 		
