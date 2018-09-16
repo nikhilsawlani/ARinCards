@@ -38,7 +38,7 @@ public class DrawLine : MonoBehaviour
             //Debug.Log(counter.ToString());
 
             float x = Mathf.Lerp(0, dist, counter);
-            Debug.Log(x.ToString());
+            //Debug.Log(x.ToString());
             Vector3 pointA = origin.position;
             Vector3 pointB = destination.position;
 
