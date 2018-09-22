@@ -31,9 +31,9 @@ public class PieGraph : MonoBehaviour {
 
             //newwedge.color = wedgec[i];
             wedge[i].fillAmount = values[i] / total;
-            wedge[i].transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, zRotation));
+            wedge[i].rectTransform.rotation = Quaternion.Euler(new Vector3(0f, 0f, zRotation));
             zRotation -= wedge[i].fillAmount * 360f;
-;        }
+        }
 
     }
 
