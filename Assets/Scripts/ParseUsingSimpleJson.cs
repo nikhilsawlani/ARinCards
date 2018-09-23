@@ -1,12 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 using SimpleJSON;
+using UnityEngine.UI;
+using TMPro;
 
 public class ParseUsingSimpleJson : MonoBehaviour
 {
     string jsonData;
 
+    public TextMeshProUGUI balance;
+
+    public TextMeshProUGUI mini1;
+    public TextMeshProUGUI minibalance1;
+
+    public TextMeshProUGUI mini2;
+    public TextMeshProUGUI minibalance2;
+
+    public TextMeshProUGUI mini3;
+    public TextMeshProUGUI minibalance3;
+
+    public TextMeshProUGUI mini4;
+    public TextMeshProUGUI minibalance4;
+
+
+
+
     void Start()
+    {
+
+    }
+
+     void Update()
     {
         StartCoroutine(Startparsing());
     }
@@ -30,16 +54,27 @@ public class ParseUsingSimpleJson : MonoBehaviour
         //Debug.Log("Bank 0 " + jsonNode["Bank"][0].ToString());
         //Debug.Log("Bank 1 " + jsonNode["Bank"][1].ToString());
         //Debug.Log("Bank 1 " + jsonNode["Bank"][2].ToString());
-
+        balance.text = "$ " + jsonNode["Bank"][0][1].ToString();
         // get individual values from Mini-statement
-        Debug.Log("Transation 1 name " + jsonNode["Bank"][0][0][0][1].ToString());
-        Debug.Log("Transation 1 amt " + jsonNode["Bank"][0][0][0][0].ToString());
-        Debug.Log("Transation 2 name " + jsonNode["Bank"][0][0][1][1].ToString());
-        Debug.Log("Transation 2 amt " + jsonNode["Bank"][0][0][1][0].ToString());
-        Debug.Log("Transation 3 name " + jsonNode["Bank"][0][0][2][1].ToString());
-        Debug.Log("Transation 3 amt " + jsonNode["Bank"][0][0][2][0].ToString());
-        Debug.Log("Transation 4 name " + jsonNode["Bank"][0][0][3][1].ToString());
-        Debug.Log("Transation 4 amt " + jsonNode["Bank"][0][0][3][0].ToString());
+        mini1.text=jsonNode["Bank"][0][0][0][1] + " :";
+        minibalance1.text = "$ " + jsonNode["Bank"][0][0][0][0].ToString();
+
+        mini2.text = jsonNode["Bank"][0][0][1][1] + " :";
+        minibalance2.text = "$ " + jsonNode["Bank"][0][0][1][0].ToString();
+
+        mini3.text = jsonNode["Bank"][0][0][2][1] + " :";
+        minibalance3.text = "$ " + jsonNode["Bank"][0][0][2][0].ToString();
+
+        mini4.text = jsonNode["Bank"][0][0][3][1] + " :";
+        minibalance4.text = "$ " + jsonNode["Bank"][0][0][3][0].ToString();
+
+
+        //Debug.Log("Transation 2 name " + jsonNode["Bank"][0][0][1][1].ToString());
+        //Debug.Log("Transation 2 amt " + jsonNode["Bank"][0][0][1][0].ToString());
+        //Debug.Log("Transation 3 name " + jsonNode["Bank"][0][0][2][1].ToString());
+        // Debug.Log("Transation 3 amt " + jsonNode["Bank"][0][0][2][0].ToString());
+       // Debug.Log("Transation 4 name " + jsonNode["Bank"][0][0][3][1].ToString());
+        //Debug.Log("Transation 4 amt " + jsonNode["Bank"][0][0][3][0].ToString());
 
 
 

@@ -16,6 +16,7 @@ public class FocusSquare : MonoBehaviour
     public GameObject findingSquare;
     public GameObject foundSquare;
     public GameObject cube;
+    public GameObject fddata;
     public GameObject button;
     public GameObject pointCloud;
 
@@ -84,6 +85,13 @@ public class FocusSquare : MonoBehaviour
                     cube.transform.LookAt(Camera.main.transform.position);
 
                     cube.transform.eulerAngles = new Vector3(0, cube.transform.eulerAngles.y, 0);
+
+
+                    fddata.transform.position = UnityARMatrixOps.GetPosition(hitResult.worldTransform);
+
+                    fddata.transform.LookAt(Camera.main.transform.position);
+
+                    fddata.transform.eulerAngles = new Vector3(0, fddata.transform.eulerAngles.y, 0);
 
                     //                  cube.transform.LookAt (Camera.current.transform);
                     //

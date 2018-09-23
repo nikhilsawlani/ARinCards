@@ -9,6 +9,7 @@ public class ContentChanger : MonoBehaviour {
     public GameObject Analytics;
     public GameObject fd;
     public GameObject stocks;
+    public GameObject focussquare;
 	// Use this for initialization
 	void Start () {
         accountinfo.SetActive(true);
@@ -16,6 +17,7 @@ public class ContentChanger : MonoBehaviour {
         Analytics.SetActive(false);
         fd.SetActive(false);
         stocks.SetActive(false);
+        focussquare.SetActive(false);
 	}
 	
     public void ActiveAccountsInfo(){
@@ -24,6 +26,7 @@ public class ContentChanger : MonoBehaviour {
         Analytics.SetActive(false);
         fd.SetActive(false);
         stocks.SetActive(false);
+        focussquare.SetActive(false);
 
     }
 
@@ -34,6 +37,7 @@ public class ContentChanger : MonoBehaviour {
         Analytics.SetActive(false);
         fd.SetActive(false);
         stocks.SetActive(false);
+        focussquare.SetActive(false);
 
     }
 
@@ -44,6 +48,7 @@ public class ContentChanger : MonoBehaviour {
         Analytics.SetActive(true);
         fd.SetActive(false);
         stocks.SetActive(false);
+        focussquare.SetActive(false);
 
     }
 
@@ -54,6 +59,7 @@ public class ContentChanger : MonoBehaviour {
         Analytics.SetActive(false);
         fd.SetActive(true);
         stocks.SetActive(false);
+        focussquare.SetActive(true);
 
     }
 
@@ -64,6 +70,7 @@ public class ContentChanger : MonoBehaviour {
         Analytics.SetActive(false);
         fd.SetActive(false);
         stocks.SetActive(true);
+        focussquare.SetActive(true);
 
     }
 
