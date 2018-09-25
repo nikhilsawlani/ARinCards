@@ -7,6 +7,12 @@ public class stockData : MonoBehaviour
     string jsonData;
 
     public GameObject bar1;
+    public GameObject bar2;
+    public GameObject bar3;
+    public GameObject bar4;
+    public GameObject bar5;
+ 
+
 
     void Start()
     {
@@ -30,10 +36,19 @@ public class stockData : MonoBehaviour
         // use simpleJSON to get values stored in JSON data for different key value pair
         JSONNode jsonNode = SimpleJSON.JSON.Parse(jsonData);
         string bar11 = jsonNode["Rank A: Real-Time Performance"]["Energy"];
-        bar11 = bar11.Remove(bar11.Length - 1);
+        string bar12 = jsonNode["Rank A: Real-Time Performance"]["Utilities"];
+        string bar13 = jsonNode["Rank A: Real-Time Performance"]["Financials"];
+        string bar14 = jsonNode["Rank A: Real-Time Performance"]["Real Estate"];
+        string bar15 = jsonNode["Rank A: Real-Time Performance"]["Industrials"];
 
-        bar1.transform.localScale = new Vector3(1, float.Parse(bar11),1) ;
-          
+        //bar11 = ;
+
+        bar1.transform.localScale = new Vector3(1, float.Parse(bar11.Remove(bar11.Length - 1)),1) ;
+        bar2.transform.localScale = new Vector3(1, float.Parse(bar11.Remove(bar12.Length - 1)), 1);
+        bar3.transform.localScale = new Vector3(1, float.Parse(bar11.Remove(bar13.Length - 1)), 1);
+        bar4.transform.localScale = new Vector3(1, float.Parse(bar11.Remove(bar14.Length - 1)), 1);
+        bar5.transform.localScale = new Vector3(1, float.Parse(bar11.Remove(bar15.Length - 1)), 1);
+
         // get individual values from Analytics
         Debug.Log("Telecommunication Services " + jsonNode["Rank A: Real-Time Performance"]["Utilities"].ToString());
         Debug.Log("Energy " + jsonNode["Rank A: Real-Time Performance"]["Health Care"].ToString());
