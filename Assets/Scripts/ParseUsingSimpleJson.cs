@@ -27,12 +27,12 @@ public class ParseUsingSimpleJson : MonoBehaviour
 
     void Start()
     {
-
+        StartCoroutine(Startparsing());
     }
 
      void Update()
     {
-        StartCoroutine(Startparsing());
+
     }
     // Use this for initialization
     IEnumerator Startparsing()
