@@ -47,7 +47,7 @@ public class ParseUsingSimpleJson : MonoBehaviour
         {
             jsonData = www.text;
         }
-
+        //Instantiate(,,)
         // use simpleJSON to get values stored in JSON data for different key value pair
         JSONNode jsonNode = SimpleJSON.JSON.Parse(jsonData);
 
